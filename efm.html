@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 30px;
+        }
+        .top-menu , .bottom-menu{
+            display: flex;
+            justify-content: start;
+            background-color:  rgb(41, 41, 41);
+            border-radius: 10px;
+        }
+        ul.top-menu>li , ul.bottom-menu>li{
+            margin: 5px 30px;
+            color: aliceblue;
+            list-style-type: none;
+            padding: 8px;
+            justify-content: center;
+        }
+        img{
+            background-color: #ffffff; 
+            border-radius: 50%; 
+            width: 25px; 
+            height: 25px; 
+            margin-top: 1px;
+        }
+        .container{
+            display: flex;
+            justify-content: space-around;
+            margin: 10px auto;
+            padding: 10px auto;
+        }
+        .conexion , .DDOAM , .DDOARV_RA , .DDOWFS{
+            display: flex;
+            flex-direction: column;
+            border: 1px solid;
+            border-radius: 10px;
+            margin: 10px;
+            padding: 10px;
+            width: 300px;
+        }
+        h4{
+            font-size: 20px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: bolder;
+            text-align: center;
+        }
+        button{
+            background-color:  rgb(41, 41, 41);
+            margin: 8px;
+            border: none;
+            border-radius: 5px;
+            padding: 8px;
+            color: #ffffff;
+        }
+        button:hover , .top-menu>li:hover , .bottom-menu>li:hover{
+            background-color: rgb(83, 83, 83);
+            border-radius: 5px;
+        }
+        p{
+            text-align: center;
+            font-size: larger;
+        }
+
+    </style>
+</head>
+<body>
+    <ul class="top-menu">
+        <li><img src="image\home.png" alt="" style=""></li>
+        <li>Accueil</li>
+        <li>Apropos</li>
+        <li>Formation initial</li>
+        <li>Formation continue</li>
+        <li>Espace stagaire</li>
+    </ul>
+    <div class="container">
+        <div class="conexion">
+            <h4>Connexion</h4>
+            <label for=""> Email </label>
+            <input type="text">
+            <label for=""> Mot de passe </label>
+            <input type="password">
+            <button>Conexion</button>
+            <p>Besoin d'un compte ? <a href=""> S'inscrire Mot de passe oublie</a></p>
+        </div>
+        <div class="DDOAM">
+            <h4>DDOAM</h4>
+            <p>Developpement option applications mobiles</p>
+            <button>Objectfs de la formation</button>
+            <button>Competences</button>
+            <button>Debouches</button>
+            <button>Employeurs</button>
+        </div>
+        <div class="DDOARV_RA">
+            <h4>DDOARV_RA</h4>
+            <p>Developpement option applications RV/RA</p>
+            <button>Objectfs de la formation</button>
+            <button>Competences</button>
+            <button>Debouches</button>
+            <button>Employeurs</button>
+        </div>
+        <div class="DDOWFS">
+            <h4>DDOWFS</h4>
+            <p>Developpement option applications Web Full Stack</p>
+            <button>Objectfs de la formation</button>
+            <button>Competences</button>
+            <button>Debouches</button>
+            <button>Employeurs</button>
+        </div>
+    </div>
+    <ul class="bottom-menu">
+        <li>Plan du site</li>
+        <li>Contact</li>
+    </ul>
+</body>
+</html>

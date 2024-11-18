@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+            @media only screen and (max-width: 950px){
+            ul{
+             background-color: black;
+            }
+            ul>li{
+            color: white;
+            }
+            h1{
+            margin-left: 20px;
+            }
+            .container .store{
+            flex-wrap: wrap;
+            padding: 1px;
+            }
+            .container .store .element{
+            margin: 20px auto;
+            }
+
+    }
+       
+        ul{
+            top: 0px;
+            justify-content:flex-start;
+            padding: 5px;
+            border-bottom: 1px solid rgb(167, 167, 167);
+            box-shadow: 3px 3px 4px rgb(167, 167, 167);
+            margin: 0px;
+            overflow: auto;
+            padding: 3px;
+        }
+        ul>li{
+           float: left;
+           list-style-type: none;
+           font-size: 15px;
+           font-family: Verdana, Geneva, Tahoma, sans-serif;
+           margin: 10px;
+        }
+        ul li a{
+            text-decoration: none;
+            color: rgb(116, 116, 116);
+        }
+
+        ul li a:hover , ul li a:active{
+            color: #363434;
+            cursor: pointer;
+        }
+
+        li:last-of-type{
+            float: right;
+        }
+        li img {
+            margin-top: -7px;
+            width: 30px;
+            height: auto;
+            border: 1px solid blue;
+            border-radius: 50%;
+        }
+        .cart-shopping .notification {
+            font-size: smaller;
+            position: absolute;
+            top: 9px;
+            right: 14px;
+            padding: 0.5px 5px;
+            border-radius: 50%;
+            background-color: red;
+            color: white;
+        }
+        h1{
+            margin-left: 20px;
+        }
+        .container{
+            background-color: rgb(242, 241, 241);
+            margin: 20px;
+            padding: 10px;
+        }
+        div.container>div{
+            display: none;
+        }
+        div.container>div:target{
+            display: block;
+        }
+        .container .store{
+            display: flex;
+            justify-content: space-evenly;
+            margin: 40px auto;
+        }
+        .container .store .element{
+            display: block;
+            border: 1px solid rgb(183, 181, 181);
+            border-radius: 10px;
+            box-shadow: 1px 1px 4px rgb(167, 167, 167);
+        }
+        .container .store .element .white-bg .store-info{
+            display: flex;
+            justify-content: space-between;
+        }
+        .add-btn{
+            width: 200px;
+            background-color: rgb(2, 120, 247);
+            color: white;
+            border-radius: 6px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding: 5px;
+            text-align: center;
+            margin-left: 40px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .check {
+            display: none;
+        }
+
+        .buttons {
+            display: none;
+        }
+
+        .check:checked + .add-btn {
+            display: none;
+        }
+        .check:checked + .add-btn + .buttons {
+            display: flex;
+            justify-content: space-around;
+        }
+        .previous, .next {
+            background-color: rgb(2, 120, 247);
+            color: white;
+            font-weight: bolder;
+            padding: 5px 10px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .previous:active, .next:active ,.next:hover , .next:hover{
+            color: #000;
+            background-color: #4f4d4d;
+            
+        } 
+
+        .white-bg{
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            padding: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        img{
+            display: block;
+            width: 300px;
+            height: 200px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .p1{
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .p2{
+            font-weight: bolder;
+        }
+
+        /* ******************* */
+
+        
+        
+        
+    </style>
+</head>
+<body>
+        <ul>
+            <li ><a href="#home">Home</a></li>
+            <li ><a href="#store">Store</a></li>
+            <li ><a href="#about">About</a></li>
+            <li class="cart-shopping">
+                <img src="image\shop.png" alt="">
+                <span class="notification">3</span>
+            </li>
+        </ul>
+    
+    <div class="container">
+        <div id="store">
+            <h1 >Store</h1>
+            <div class="store">
+                <div class="element">
+                    <img src="image\book.avif" alt="">
+                    <div class="white-bg">
+                        <div class="store-info">
+                            <p class="p1">Book</p>
+                            <p class="p2">$10.99</p>
+                        </div>
+                        <input type="checkbox" id="toggleBtn1" class="check">
+                        <label for="toggleBtn1" class="add-btn">Add to Cart</label>
+                        <div class="buttons">
+                            <a class="previous"> < </a>
+                            <a class="next"> > </a>
+                            <button type="reset" style="background-color: rgb(195, 78, 78);color: #f9f9f9;border: none; border-radius: 10px;">remove</button>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                <div class="element">
+                    <img src="image\laptob.jpeg" alt="">
+                    <div class="white-bg">
+                        <div class="store-info">
+                            <p class="p1">Computer</p>
+                            <p class="p2">$1,199.00</p>
+                        </div>
+                        <input type="checkbox" id="toggleBtn2" class="check">
+                        <label for="toggleBtn2" class="add-btn">Add to Cart</label>
+                        <div class="buttons">
+                            <a for="prev" class="previous"><</a>
+                            <a for="nxt" class="next">></a>
+                            <button type="reset" style="background-color: rgb(195, 78, 78);color: #f9f9f9;border: none; border-radius: 10px;">remove</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="element">
+                    <img src="image\book.jpg" alt="">
+                    <div class="white-bg">
+                        <div class="store-info">
+                            <p class="p1">Note-Book</p>
+                            <p class="p2">$10.99</p>
+                        </div>
+                        <input type="checkbox" id="toggleBtn3" class="check">
+                        <label for="toggleBtn3" class="add-btn">Add to Cart</label>
+                        <div class="buttons">
+                            <a class="previous"><</a>
+                            <a class="next">></a>
+                            <button type="reset" style="background-color: rgb(195, 78, 78);color: #f9f9f9;border: none; border-radius: 10px;">remove</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="home">
+               
+        </div>
+        <div id="about" >
+                  
+        </div>
+    </div>
+</body>
+</html>
